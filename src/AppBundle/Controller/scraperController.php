@@ -11,8 +11,15 @@ class scraperController extends Controller {
     * @Route("/scraper/{scrapeWhat}")
     */
     public function showAction($scrapeWhat) {
+
+        $info = ['We will soon be scraping Facebook',
+                 'for all your info so we can display',
+                 'it all nice and neat for you here!',
+                 'Let\'s have soom fun!'];
+
         return $this->render('scraper/show.html.twig', array(
-            'facebook' => $scrapeWhat
+            'name' => $scrapeWhat,
+            'info' => $info
         ));
     }
 }

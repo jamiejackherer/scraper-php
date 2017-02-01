@@ -1,1 +1,15 @@
-<h1>The {{ facebook }} Scraper</h1>
+{% extends 'base.html.twig' %}
+
+{% block title %}The {{ name }} Scraper{% endblock %}
+
+{% block body %}
+<h1>The {{ name }} Scraper</h1>
+
+<ul>
+    {% for i in info %}
+        <li>
+            {{ i }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
